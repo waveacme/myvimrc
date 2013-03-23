@@ -1,6 +1,4 @@
-colorschem desert
-set ic
-set sm
+colorschem darkblue
 set cin
 set ts=8
 set sw=8
