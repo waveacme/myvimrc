@@ -1,4 +1,4 @@
-colorschem darkblue
+colorschem desert
 set cin
 set ts=8
 set sw=8
@@ -13,9 +13,10 @@ set vb t_vb=
 set nocompatible
 set nobackup
 set backspace=indent,eol,start
-hi Comment ctermfg=LightBlue
-hi SpecialKey ctermfg=LightBlue
-hi Directory ctermfg=LightBlue
+
+"hi Comment ctermfg=Blue
+"hi SpecialKey ctermfg=LightBlue
+"hi Directory ctermfg=LightBlue
 """""""""""""""""""""""""""""'
 set encoding=utf-8  
 set fileencodings=utf-8,chinese,gbk,gb2312,gb18030,cp936,latin-1 
@@ -48,6 +49,8 @@ map <F1> :Tlist<CR>
 set nocscopeverbose
 
 "putty
+if has("win32")
+
 if has("terminfo")
   let &t_Co=16
   let &t_AB="\<Esc>[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm"
@@ -56,6 +59,10 @@ else
   let &t_Co=16
   let &t_Sf="\<Esc>[3%dm"
   let &t_Sb="\<Esc>[4%dm"
+endif
+
+else
+	let &t_Co=256
 endif
 
 "diff
